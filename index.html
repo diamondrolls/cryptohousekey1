@@ -12,85 +12,394 @@
            <meta name="google-site-verification" content="VrV3FJ_c0ff2OBwjVn2r0vdYJdcWEYke-XnUMS2Nh5c" />
            
            <style type= "text/css">
-		html,
-		   
-body {
+			*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
   height: 100%;
-}
-.neon
-{
-  position:absolute;
-  top:10%;
-  left:15%;
-	translate:transform (-50%,-50%);
-	margin:0;
-	padding:0 15px;
-	font-size:6em;
-	color:#34ccff;
-	text-shadow:0 0 20px;
+  
 }
 
-.neon:after
-{
-	top:0;
-	left:0;
-	content:attr(data-text);
-	position:absolute;
-	padding:0 0 20px;
-	z-index:-1;
-	color:#34ccff;
-	filter:blur(15px);
+/*--------------------
+ Chat
+ --------------------*/
+.chat {
+  position: absolute;
+  top: 35%;
+  left:48%;
+  
+  transform: rotateY(-6deg);
+  transform:rotateX(-2deg);
+   
+  
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(155,0,255, 1);
+  background:rgba(256,256,256,.7);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+   -webkit-animation: mymove 25s linear 1s infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: mymove 25s linear 1s infinite alternate;
 }
 
-.neon:before
-{
-	content:" ";
-	top:0;
-	left:0;
-	position:absolute;
-	background:#34ccff;
-	z-index:-3;
-	opacity:.5;
-	filter:blur(40px);
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {
+   left:50px;
 }
+  to{
+  left:400px;
+  }
+@keyframes mymove {
+ from {
+   left:50px;
+}
+  to{
+  left:400px;
+  }
+  }
+}
+/*--------------------
+ Chat Title
+ --------------------*/
+.chat-title {
+  flex: 0 1 45px;
+  position: relative;
+  z-index: 2;
+  background: rgba(155, 0, 255, .25);
+  color: #00ff66;
+  text-transform: uppercase;
+  text-align: left;
+  text-size:24px;
+  padding: 10px 10px 10px 50px;
+}
+.chat-title h1, .chat-title h2 {
+  font-weight: normal;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.chat-title h2 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+.chat-title .avatar {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 9px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.chat-title .avatar img {
+  width: 100%;
+  height: auto;
+}
+/*--------------------
+ Messages
+ --------------------*/
+.messages {
+  flex: 1 1 auto;
+  color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height:110%;
+}
+.messages .messages-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 101%;
+  width: 100%;
+}
+.messages .message {
+  clear: both;
+  float: left;
+  padding: 6px 10px 7px;
+  border-radius: 10px 10px 10px 0;
+  background: rgba(155, 0, 255, 1);
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 5px;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+}
+.messages .message .timestamp {
+  position: absolute;
+  bottom: -15px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 1);
+}
+.messages .message::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  border-top: 6px solid rgba(0, 0, 0, .3);
+  left: 0;
+  border-right: 7px solid transparent;
+}
+.messages .message .{
+  position: absolute;
+  z-index: 1;
+  bottom: -15px;
+  left: -35px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.messages .message .avatar img {
+  width: 100%;
+  height: auto;
+}
+.messages .message.message-personal {
+  float: right;
+  color: #fff;
+  text-align: right;
+  background: linear-gradient(120deg, #248a52, #257287);
+  border-radius: 10px 10px 0 10px;
+}
+.messages .message.message-personal::before {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 5px solid transparent;
+  border-top: 4px solid #257287;
+  bottom: -4px;
+}
+.messages .message:last-child {
+  margin-bottom: 30px;
+}
+.messages .message.new {
+  transform: scale(0);
+  transform-origin: 0 0;
+  animation: bounce 500ms linear both;
+}
+.messages .message.loading::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .5);
+  z-index: 2;
+  margin-top: 4px;
+  animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  border: none;
+  animation-delay: 0.15s;
+}
+.messages .message.loading span {
+  display: block;
+  font-size: 0;
+  width: 20px;
+  height: 10px;
+  position: relative;
+}
+.messages .message.loading span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  z-index: 2;
+  margin-top: 4px;
+  animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  margin-left: -7px;
+}
+.messages .message.loading span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .5);
+  z-index: 2;
+  margin-top: 4px;
+  animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  margin-left: 7px;
+  animation-delay: 0.3s;
+}
+/*--------------------
+ Message Box
+ --------------------*/
+.message-box {
+  flex: 0 1 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+}
+.message-box .message-input {
+  background: none;
+  border: none;
+  outline: none !important;
+  resize: none;
+  color: rgba(255, 255, 255, .7);
+  font-size: 11px;
+  height: 17px;
+  margin: 0;
+  padding-right: 20px;
+  width: 265px;
+}
+.message-box textarea:focus:-webkit-placeholder {
+  color: transparent;
+}
+.message-box .message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  background: #248a52;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  outline: none !important;
+  transition: background 0.2s ease;
+}
+.message-box .message-submit:hover {
+  background: #1d7745;
+}
+/*--------------------
+ Custom Srollbar
+ --------------------*/
+.mCSB_scrollTools {
+  margin: 1px -3px 1px 0;
+  opacity: 0;
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 0px;
+  padding: 0 10px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+/*--------------------
+ Bounce
+ --------------------*/
 
-		   body{
-			  background-image:url('https://i.pinimg.com/564x/93/bc/6e/93bc6ec3801547b0516bdbfc34e04562.jpg');
-			  background-repeat:no-repeat;
-			margin:auto;
+@keyframes ball {
+  from {
+    transform: translateY(0) scaleY(0.8);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+ body{
+              background-image:url('https://i.pinimg.com/564x/93/bc/6e/93bc6ec3801547b0516bdbfc34e04562.jpg');
+              background-repeat:no-repeat;
+            margin:auto;
                        background-size:cover;
-			position:relative;
+            position:relative;
                         -webkit-perspective:100px;
-			   perspective:100px;
-		   }
+               perspective:100px;
+           }
 img{
   padding-top:15%;
 }
 div.containerultra{
    position:absolute; 
-  margin-left:40%;
-  margin-top:60%;
+  margin-left:1%;
+  margin-top:55%;
   height:320px;
 -webkit-transform-style:preserve-3d;
-transform-style:preserve-3d;	
+transform-style:preserve-3d;    
   width:500px;
   background-image:url('http://rentouripads.com/images/iPadAir.png');
-     -webkit-transform:rotateX(6deg);
-	transform:rotateX(6deg);
+     -webkit-transform:rotateY(2deg);
+    transform:rotateY(2deg);
   background-repeat:no-repeat;
   background-size:cover;
-	           
-  
+        z-index:27;       
 }
-                      </style>
+.neon
+{
+  position:absolute;
+  top:10%;
+  left:2%;
+    translate:transform (-50%,-50%);
+    margin:0;
+    padding:0 15px;
+    font-size:6em;
+    color:#ffff;
+    text-shadow:0 0 20px;
+}
+.neon:after
+{
+    top:0;
+    left:0;
+    content:attr(data-text);
+    position:absolute;
+    padding:0 0 20px;
+    z-index:-1;
+    color:#ffff;
+    filter:blur(15px);
+}
+.neon:before
+{
+    content:" ";
+    top:0;
+    left:0;
+    position:absolute;
+    background:#ffff;
+    z-index:-3;
+    opacity:.5;
+    filter:blur(40px);
+}   </style>
 	</header>
  
   <body>
 	   <h7 class="neon" data-text="DIAMONDROLL$">DIAMONDROLL$</h7>
   
-         
+<div class="chat">
+  <div class="chat-title">
+    
+   
+  </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TTy_QwmyT8U" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="messages-content"></div>
+  
+  <div class="message-box">
+    <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+    <button type="submit" class="message-submit">Send</button>
+  </div>
+
+</div>
+  
+           
 <center><div class= "containerultra">
-		<a href="https://diamondrolls.github.io/homepage/"><img src="https://i.pinimg.com/originals/c3/97/7d/c3977d7be06576701fd39950123b13d6.gif"
-                      width="150px" height="150px" ></a> </div></center>
+        <a href="https://diamondrolls.github.io/homepage/"><img src="https://i.pinimg.com/originals/c3/97/7d/c3977d7be06576701fd39950123b13d6.gif"
+                
 	</body>
   </html>
