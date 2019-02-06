@@ -12,7 +12,7 @@
            <meta name="google-site-verification" content="VrV3FJ_c0ff2OBwjVn2r0vdYJdcWEYke-XnUMS2Nh5c" />
            
            <style type= "text/css">
-					*, *::before, *::after {
+							*, *::before, *::after {
   box-sizing: border-box;
 }
 html, body {
@@ -26,7 +26,7 @@ html, body {
 .chat {
   position: absolute;
   margin-top: 25%;
-  
+  left:48%;
   
   transform: rotateY(-6deg);
   transform:rotateX(-2deg);
@@ -336,9 +336,27 @@ div.containerultra{
   width:500px;
   background-color: rgba(225, 225, 225, .5);
         z-index:27; 
-	transform: rotateY(-6deg);
-  transform:rotateX(-2deg);
-   
+  
+ -webkit-animation: mymovie 8s linear 1s infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: mymovie 8s linear 1s infinite alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymovie {
+  from {
+   transform:rotateX(0deg);
+}
+  to{
+  transform:rotateX(4deg);
+  }
+@keyframes mymovie {
+ from {
+    transform:rotateX(4deg);
+}
+  to{
+  transform:rotateX(5deg);
+  }
+  }
 }
 .limitlest{
   margin-top:15%;
