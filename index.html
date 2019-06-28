@@ -305,26 +305,28 @@ background-color:rgba(22, 23, 50, .7);
 	  <br>
 	
 <script>
-  var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
-
-  var checkoutButton = document.getElementById('checkout-button-plan_FL0zxg3YWI7BY3');
-  checkoutButton.addEventListener('click', function () {
  
-    stripe.redirectToCheckout({
-      items: [{plan: 'plan_FL0zxg3YWI7BY3', quantity: 1}],
+	 var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
 
+  var checkoutButton = document.getElementById('checkout-button-plan_FAZfsYijncr3Xu');
+  checkoutButton.addEventListener('click', function () {
+   
+    stripe.redirectToCheckout({
+      items: [{plan: 'plan_FAZfsYijncr3Xu', quantity: 1}],
+
+   
       successUrl: window.location.protocol + '//diamondrolls.org/success',
       cancelUrl: window.location.protocol + '//diamondrolls.org/canceled',
     })
     .then(function (result) {
       if (result.error) {
-        
+     
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
     });
   });
-	<script>
+	
   var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
 
   var checkoutButton = document.getElementById('checkout-button-sku_FL841wAkHsbGka');
