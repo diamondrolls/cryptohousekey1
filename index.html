@@ -126,23 +126,22 @@ h1{
 	
 		  .neon
 {
-  
-  top:5%;
-  left:5%;
+  position:absolute;
+  top:10%;
+  left:35%;
 	translate:transform (-50%,-50%);
 	margin:0;
 	padding:0 20px;
 	font-size:6em;
 	color:#34ccff;
 	text-shadow:0 0 20px;
-	position:absolute;
 }
 
 
 .neon:after
 {
-	 top:0;
-  left:0;
+	top:0;
+	left:0;
 	content:attr(data-text);
 	position:absolute;
 	padding:0 0 20px;
@@ -153,16 +152,16 @@ h1{
 
 .neon:before
 {
-	position:absolute;
 	content:" ";
-	 top:0;
-  left:0;
-	padding:0 0 20px;
+	top:0;
+	left:0;
+	position:absolute;
 	background:#34ccff;
 	z-index:-3;
 	opacity:.5;
 	filter:blur(40px);
 }
+
 		
 .premium{
         border-style:outset;
