@@ -159,16 +159,51 @@ h1{
 	filter:blur(40px);
 }
 
+.container{
+    right:10%;
+ position:absolute;
+  z-index:50;
+  width:50px;
+		 background-image:url("https://i.pinimg.com/originals/35/38/ed/3538edbdb531c7fe3bb387ead4b398b0.png");
+	  background-size:50px 50px;
+	  background-repeat:no-repeat;
+  height:50px;
+  animation:money .3s linear 2s infinite;
+  -webkit-animation: money .3s linear 2s infinite;/* Safari 4.0 - 8.0 */
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+  from{
+     top:0px;
+    
+  }
+  to{
+     top:200px;
+   
+  }
+}
+@keyframes money{
+  from{
+     top:0px;
+    
+  }
+  to{
+    top:200px;
+  }
+		  }
+
+	
 		  
 .containers{
 	overflow:hidden;
  position:absolute;
   z-index:50;
-  width:100px;
+  width:50px;
+    top:200px;
 		 background-image:url("https://i.pinimg.com/originals/35/38/ed/3538edbdb531c7fe3bb387ead4b398b0.png");
-	  background-size:100px 100px;
+	  background-size:50px 50px;
 	  background-repeat:no-repeat;
-  height:100px;
+  height:50px;
   animation:moneytime .5s linear 2s infinite;
   -webkit-animation: moneytime .5s linear 2s infinite;/* Safari 4.0 - 8.0 */
 }
@@ -253,8 +288,10 @@ h1{
 			<h9 class ="containers"></h9> <a href="https://diamondrolls.github.io/homepage/">
         <div class="crazy"><center><h7 class="neon" data-text="D">D</h7></center></div></a>
  </div></center>
-	 
-	  <center>
+	 	
+      <div class ="container"></div>
+	  
+      <center>
 	<a href="http://thepremiumway.gq/" target="_blank"><div class="premium"> <button>93 PREMIUM music</button></div></a>
 </center>
 	   <br>
@@ -344,7 +381,6 @@ h1{
 	  <br>
            <br>
 	  <br>
-	
 <script>
  
 	 var stripe = Stripe('pk_live_cmDOcEOGiegpbw6AkUpMmFZM0074v4tFAm');
