@@ -119,16 +119,6 @@ h1{
 	
  }
 		  
-		  .withloves{
-		  width:430px; 
-	height:250px;
-	float:left;
-	z-index:-5;
-	 background-size:430px 250px;
-	background-repeat:no-repeat;
-	  background-image:url("https://i.pinimg.com/originals/47/fa/b5/47fab5c033b78893041b5284d727f763.png");
-		  }
-		  
 		  #left-sidebar{
   float:left;
   width:370px;
@@ -223,11 +213,11 @@ h1{
   width:150px;
 	
   height:50px;
-  animation:money 3s linear 2s infinite;
-  -webkit-animation: money 3s linear 2s infinite;/* Safari 4.0 - 8.0 */
+  animation:moneyz 3s linear 2s infinite;
+  -webkit-animation: moneyz 3s linear 2s infinite;/* Safari 4.0 - 8.0 */
 }
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes money{
+@-webkit-keyframes moneyz{
   from{
      left:19%;
     
@@ -237,7 +227,7 @@ h1{
    
   }
 }
-@keyframes money{
+@keyframes moneyz{
   from{
     left:19%;
     
@@ -247,7 +237,42 @@ h1{
   }
 		  }
 
+	
+		  .withloves{
+ position:relative;
+  z-index:20;
+  float:left;
+  width:430px;
+    top:200px;
+	 background-image:url("https://i.pinimg.com/originals/35/38/ed/3538edbdb531c7fe3bb387ead4b398b0.png");
+	 background-size:430px 250px;
+	  background-repeat:no-repeat;
+  height:250px;
+  animation:moneytimeb 2s linear 2s alternate infinite;
+  -webkit-animation: moneytimeb 2s linear 2s alternate infinite;/* Safari 4.0 - 8.0 */
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes moneytimeb{
+  from{
+   top:5%;
+    
+  }
+  to{
+     top:10%;
+   
+  }
+}
+@keyframes moneytimeb{
+  from{
+    top:5%;
+    
+  }
+  to{
+    top:10%;
+  }
+		  }
 
+		  
 		  
 .containers{
 	overflow:hidden;
@@ -368,7 +393,7 @@ h1{
 
  <center><div class="withlove">
 	<img src="https://i.pinimg.com/originals/90/22/9c/90229c2b42ef71677b73781c5fb7a2a6.jpg" 
-				       align="left" height="150px" width="730px">
+				       align="left" height="150px" width="700px">
 	  <br>
            <div class="withloves">
 		   </div>
