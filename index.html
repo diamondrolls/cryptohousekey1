@@ -485,7 +485,74 @@ h1{
 		  }
 		  
  
-		  
+	h4{
+  color:#FFFFFF;
+  font-size:35px;
+	z-index:71;
+		
+}
+.yes{
+	z-index:71;
+        border-style:outset;
+	border-color:rgb(0,255,0);
+	background-color:rgb(0,0,0);
+	height:100px;
+	border-radius:15%;
+	width:200px;
+     margin-left:50%;
+	}
+	.yes:hover {
+    float:none;
+    background-color:aqua; 
+    }     
+		  .no{
+			  border-radius:15%;
+		background-color:rgb(0,0,0);
+	border-style:solid;
+	border-color:rgb(255,0,0);
+	height:100px;
+	z-index:71;
+	width:200px;
+	float:right;
+      
+	 }
+		
+		  .no:hover {
+    float:none;
+    background-color:aqua; 
+    }  
+
+.container{
+   top:-650px;
+  left:20%;
+  z-index:70;
+   position:relative;
+  width:650px;
+	 background-image:url("https://i.pinimg.com/originals/aa/36/a9/aa36a94b3d1ad0967c8aabac5a86b940.png");
+	  background-size:650px 550px;
+	  background-repeat:no-repeat;
+  height:550px;
+  animation:money 7.5s 3 ;
+  -webkit-animation: money 7.5s  3 ;/* Safari 4.0 - 8.0 */
+  animation-direction:alternate;
+   -webkit-animation-direction:alternate;/* Safari 4.0 - 8.0 */
+  
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes money{
+  50% {left:20%; top:-650px;}
+     100% {left:20%; top:100px;}
+  
+}
+@keyframes  money{
+  50% {left:20%; top:-650px;}
+     100% {left:20%; top:100px;}
+  
+   
+  
+}
+
+	  
 	
 		</style>
 	</header>
@@ -501,6 +568,12 @@ h1{
 	    	
 	 <br>
 	<br>
+	  <div class="container">
+  <h4>Go To Chatt Rooms?</h4>
+  <div class="yes" onclick="myFunction()"><h4>Yes</h4></div> <div class="no"><h4>N0</h4></div>
+  
+  
+  </div>
 	<br>
 	 <br>
 
@@ -668,7 +741,9 @@ h1{
 	  <br>
 <script>
  
-	
+	function myFunction() {
+  window.open("https://diamondrolls.org/");
+}
 
 </script>
     </body>
