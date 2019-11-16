@@ -306,14 +306,13 @@ html{
 	}
 
 .premiums{
-	z-index:54;
         border-style:outset;
 	border-color:rgb(255,255,255);
 	background-color:rgba(0,0,0,.7);
 	height:200px;
 	border-radius:50%;
 	width:300px;
-	position:relative;
+	position:absolute;
 	overflow:hidden;
         left: 65%;
 	animation:mined 4.5s linear infinite;
@@ -352,8 +351,8 @@ h2{
 
 
 .lamborghini{
-   
-  left:5%;
+   float:left;
+  
   z-index:70;
    position:absolute;
   width:650px;
@@ -367,9 +366,9 @@ h2{
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes cmoney{
-  0% {left:5%; top:-650px;}
-     50% {left:5%; top:55px;}
-	100% {left:5%; top:45px;}
+  0% { top:-650pxpx;}
+     50% { top:55px;}
+	100% { top:45px;}
   
 }
 @keyframes  cmoney{
@@ -419,11 +418,9 @@ width:100%;
 <meta name="p:domain_verify" content="0968be64dfde6e0c1f25ce7e74392f0a"/>
 
 		
-<div class="lamborghini">
-  
   <div class="premiums" onclick="myFunction()"><h7 class="neon" data-text="D">D</h7></div>
 	
-	</div>
+
 	 </head>
   <body>
 	
@@ -525,7 +522,8 @@ width:100%;
 		  are or as strong as a nation.
 		</b></li></ul>
 		 </ul>     </div>
-		</center> 
+			  <div class="membership"></div>
+		<div class="lamborghini">
 	 </div>
 	 </div>
 	  <div class="membership2"></div> 
