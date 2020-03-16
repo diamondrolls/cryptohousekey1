@@ -42,7 +42,7 @@ position:relative;
 	border-radius:50%;
 	border-color:rgb(0,255,255);
 	border-style:outset;
-       float:right;
+       float:left;
 	z-index:999;
 }
 
@@ -137,6 +137,48 @@ h1{
   font-color:#fffff;
   font-size:100px;
 }
+
+	.headerthing{
+		  width:400px;
+		height:400px;
+		position:absolute;
+		background-color:rgba(0,0,0.6);
+	        border-color:rgb(0,355,355);
+		border-radius:40px;
+		margin-right:200px;
+		float:right;
+		overflow:hidden;
+		  }
+		  
+		  header1{
+			 -webkit-animation:emergancy 1s infinate;
+			  animation:emergancy 1s infinate;
+		  }
+		  
+		  header2{
+			  -webkit-animation:emergancy2 1s infinate;
+			  animation:emergancy2 1s infinate;
+		  }
+		  
+		  @-webkit-keyframes emergancy{
+			  0%{left:-150px;}
+			  100%{left:50px;}
+		  }
+		  
+		  @keyframes emergancy{
+		   0%{left:-150px;}
+			  100%{left:50px;}
+		  }	
+		  
+		  @-webkit-keyframes emergancy2{
+		   0%{right:-150px;}
+			  100%{right:50px;}
+		  }
+		  
+		  @keyframes emergancy2{
+		  0%{right:-150px;}
+			  100%{right:50px;}
+		  }
 		  
 		.scholarships{
    Float:left;
@@ -345,9 +387,12 @@ background-color:aqua;
 	<br>
  <br>
 	<br>
-<center>  
+ <div class="headerthing">
+	  <div class="header2"><h7 class="neon" data-text="emergancy">emergancy</h7></div>
+	  <div class="header2"><h7 class="neon" data-text="toiletries">toiletries</h7></div>
+	  </div>
    <a href="https://diamondrolls.github.io/exchange/"> <div class="lamborghiniveneno">
-</div></a></center>
+</div></a>
 	
 
 	<ul> 
