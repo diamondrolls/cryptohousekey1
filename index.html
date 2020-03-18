@@ -168,8 +168,18 @@ h1{
 		 -webkit-animation:emergancy 5s linear 1s infinite;
 		  animation:emergancy 5s linear 1s infinite;
 		  }
+		   @-webkit-keyframes emergancy{
+			  0%{left:0%;}
+			  100%{left:100%;}
+		  }
 		  
-     header2{
+		  @keyframes emergancy{
+		   0%{left:0%;}
+			  100%{left:100%;}
+		  }
+     
+
+header2{
                      z-index:661;
 			  width:50px;
 		         height:50px;
@@ -178,15 +188,7 @@ h1{
 			  animation:emergancy2 5s linear 1s infinite;
 		  }
 		  
-		  @-webkit-keyframes emergancy{
-			  0%{left:0%;}
-			  100%{left:100%;}
-		  }
-		  
-		  @keyframes emergancy{
-		   0%{left:0%;}
-			  100%{left:100%;}
-		  }	
+		 	
 		  
 		  @-webkit-keyframes emergancy2{
 		   0%{right:0%;}
