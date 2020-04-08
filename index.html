@@ -86,14 +86,22 @@ margin-right:30px;
 
 .love2{
 	  border-radius:40px;
-	          overflow:scroll;   
+	          overflow:hidden;   
 	 position:relative;
 	border-style:inset;
   height:1300px;
   width:97%;
+background-size:100% 1300px
 	background-image:url("https://i.pinimg.com/originals/da/e7/4b/dae74bd450817013bc21669e9135f8d3.jpg");
-Overflow:scroll;
 border-color:rgb(0,255,255);
+}
+
+
+.love3{
+	 
+	          overflow:scroll;
+  height:1280px;
+  width:100%;
 }
 
 .participate{
@@ -188,7 +196,7 @@ h1{
 		border-radius:40px;
 		overflow:hidden;
 		  } 
- .header1{        
+ .header1{      right:-100%;  
               z-index:661;
 		 width:50px;
 		height:50px;
@@ -207,9 +215,47 @@ h1{
 		  }
      
 
-
+ .shootingstar{  left:-100%; 
+top:300px;     
+              z-index:-661;
+		 width:50px;
+		height:50px;
+	        position:absolute;
+		 -webkit-animation:emergance 3s linear 1s infinite;
+		  animation:emergance 3s linear 1s infinite;
+		  }
+		   @-webkit-keyframes emergance{
+			  0%{left:-100%; top:300px;   }
+			  100%{left:120%; top:50px;   }
+		  }
 		  
-		.scholarships{
+		  @keyframes emergance{
+		   0%{left:-100%; top:300px;   }
+			  100%{left:120%; top:50px;   }
+		  }
+		  
+	
+ .satellite{    
+top:400px;  
+right:45%;
+              z-index:-661;
+		 width:50px;
+		height:50px;
+	        position:absolute;
+		 -webkit-animation:emerganc 5s linear 1s infinite alternate;
+		  animation:emerganc 5s linear 1s infinite alternate;
+		  }
+		   @-webkit-keyframes emerganc{
+			  0%{left:45%; top:400px;}
+			  100%{left:95%%; top:400px;}
+		  }
+		  
+		  @keyframes emerganc{
+	0%{left:45%; top:400px;}
+			  100%{left:95%%; top:400px;}
+		  }
+
+	.scholarships{
    Float:left;
   width:250px;
 	 background-image:url("https://i.pinimg.com/originals/39/8f/ef/398fefefa5cebf141c3f5c5aee8c2c77.png");
@@ -446,7 +492,9 @@ right:10px;
 	  <div class="membership2"></div>
 <center>
 <div class="love2">
-
+<div class="love3">
+<div class="shootingstar"></div>
+<div class="satellite"></div>
 <h1>Do you qualify for government home assistance?</h1>
 <img src="https://i.pinimg.com/originals/19/98/e2/1998e210f9ca371dbfb3d9be3be437ae.jpg" width="450px" height="450px">
 
@@ -483,7 +531,7 @@ Exchange Your crypto with us for a better exchange rate.
 </div>
 	
 	
-	
+	</div>
 </div>
  </center>
 <div class="membership2"></div>
