@@ -34,7 +34,7 @@
 
 .lamborghini{
 width:150px;
-margin-top:500px;
+margin-top:250px;
   height:150px;
 left:150px;
 position:absolute;
@@ -188,7 +188,6 @@ position:relative;
     }
 
 ul li {
-float:left;
 position:relative;
      width:1px; 
 	height:1px;
@@ -214,10 +213,8 @@ background-color:rgba(0,0,0,.7);
 ul li ul li {
     display: none;
 position:relative;
-float:left;
 }
 ul li:hover ul li {
-float:left;
 z-index:999;
     display: block;
 Position:relative;
@@ -370,8 +367,20 @@ background-size:250px 320px;
 		 width:300px;
 		height:350px;
 	        position:absolute;
+           animation: rotatingphone 4s infinite;
+          -@webkit-animation: rotatingphone 4s infinite;
 		  }
 	
+@-webkit-keyframes rotatingphone{
+0%{  rotate:x(0deg);}
+100%{  rotate:x(360deg);}
+}
+
+@keyframes rotatingphone{
+0%{  rotate:x(0deg);}
+100%{  rotate:x(360deg);}
+}
+
 
      .witlove{
 	width:2000px; 
