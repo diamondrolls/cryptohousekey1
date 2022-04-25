@@ -38,8 +38,7 @@
 .witlove{
 	width:4000px; 
 	height:605px;
-	overflow:hidden;
-			
+	overflow:hidden;			
  }
 	  
    .withlove{
@@ -51,10 +50,6 @@
 	border-radius:40px;
 	   z-index:99999;
  }
-
-
-
-
 
 	   .registration{
 	border-color:rgb(0, 255, 255);
@@ -69,7 +64,7 @@
 }
 		
     .registrationbutton{
-background-color:rgb(0, 0, 0);
+background-color:rgb(0, 215, 255, .5);
 	background-size:300px 150px;      
 	  z-index:999999;
 	position:absolute;
@@ -83,7 +78,7 @@ background-color:rgb(0, 0, 0);
 }
 
 		   .registrationbutton2{
-background-color:rgb(0, 0, 0);
+background-color:rgba(0, 215, 255, .5);
 	background-size:300px 150px;      
 	  z-index:999999;
 	position:absolute;
@@ -198,14 +193,13 @@ position:relevant;
 }
 
 .cube{
-        left:200px;
-       
-        top:350px;
+        left:200px;   
+        top:400px;
         position: absolute;
 	width:500px;
 	height:500px;
         transform-style:preserve-3d;
-        transform: rotateY(-5deg) rotateX(-115deg) rotateZ(-215deg);
+        transform: rotateY(-5deg) rotateX(115deg) rotateZ(-215deg);
        animation:money 13s infinite ;
        -webkit-animation: money 13s infinite;/* Safari 4.0 - 8.0 */
 }
@@ -233,19 +227,23 @@ position:relevant;
   left: 0;
   position: absolute;
   border-radius: 10%;
+border-style:outset;
+       border-color:rgb(255, 255, 255);
 }
 
 .top {
   transform: translateZ(-60px);
   background-color:rgba(255, 0, 0, .5);
-	
+	border-style:outset;
+       border-color:rgb(255, 255, 255);
 }
 
 .front {
   transform: rotateX(90deg);
   transform-origin: bottom;
   background-color:rgba(255, 0, 0, .5);
-	
+	border-style:outset;
+       border-color:rgb(255, 255, 255);
 }
 
 .left {
@@ -253,13 +251,14 @@ position:relevant;
   transform: translateZ(-60px) rotateY(90deg);
   transform-origin: right;
   background-color:rgba(255, 0, 0, .5);
+  border-style:outset;
+       border-color:rgb(255, 255, 255);
 }	
 .imagea {
         z-index:100px;
         background-color:rgba(255, 0, 0, .5);
 	transform-style: preserve-3d;
-        transform: translateX(11px) translateY(20px) translateZ(75px) perspective(200px);
-        
+        transform: translateX(11px) translateY(20px) translateZ(75px) perspective(200px);   
         height: 500px;
         width: 500px;
         border-width:thick;
@@ -333,12 +332,13 @@ ul li ul li {
     display: none;
 position:relative;
 }
+
 ul li:hover ul li {
-z-index:999;
-width:99%;
-height:99%;
+    z-index:999;
+    width:99%;
+    height:99%;
     display: block;
-Position:relative;
+    Position:relative;
 }
 
 body{
