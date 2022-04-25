@@ -227,15 +227,17 @@ position:relevant;
   left: 0;
   position: absolute;
   border-radius: 10%;
-border-style:outset;
+  border-style:outset;
        border-color:rgb(255, 255, 255);
 }
 
 .top {
   transform: translateZ(-60px);
+  transform: rotateY(10deg)
   background-color:rgba(255, 0, 0, .5);
 	border-style:outset;
        border-color:rgb(255, 255, 255);
+     background-color:rgba(255, 0, 0, .5);
 }
 
 .front {
@@ -245,7 +247,14 @@ border-style:outset;
 	border-style:outset;
        border-color:rgb(255, 255, 255);
 }
-
+  
+.back {
+  transform: rotateX(90deg);
+  transform-origin:top;
+  background-color:rgba(255, 0, 0, .5);
+	border-style:outset;
+       border-color:rgb(255, 255, 255);
+}
 .left {
   width: 100%;
   transform: translateZ(-60px) rotateY(90deg);
@@ -372,6 +381,7 @@ body{
    <div class="side left"></div>
    <div class="side right"></div>
    <div class="side front"></div>
+      <div class="side back"></div>
 </div>
 
 
