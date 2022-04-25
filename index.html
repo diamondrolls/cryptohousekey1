@@ -247,9 +247,19 @@ border-style:outset;
 }
 
 .left {
-  width: 60px;
+  width: 100%;
   transform: translateZ(-60px) rotateY(90deg);
   transform-origin: right;
+  background-color:rgba(255, 0, 0, .5);
+  border-style:outset;
+       border-color:rgb(255, 255, 255);
+}	
+
+.right {
+  width: 100%;
+  
+  transform: translateZ(60px) rotateY(-90deg);
+  transform-origin: left;
   background-color:rgba(255, 0, 0, .5);
   border-style:outset;
        border-color:rgb(255, 255, 255);
@@ -360,6 +370,7 @@ body{
 <div class="cube">
    <div class="side top"></div>
    <div class="side left"></div>
+   <div class="side right"></div>
    <div class="side front"></div>
 </div>
 
