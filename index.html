@@ -256,6 +256,18 @@ position:relevant;
 	border-style:outset;
        border-color:rgb(255, 255, 255);
 }
+
+.frontdoor {
+  height:100px;
+  width:50px;
+  bottom:0px;
+  left:45%;
+  transform: translateZ(192px);
+  position:absolute;
+  background-color:rgb(255, 215, 1);
+	border-style:outset;
+       border-color:rgb(255, 215, 0);
+}
 .left {
   width: 100%;
   transform: translateZ(-315px) rotateY(90deg);
@@ -352,7 +364,7 @@ body{
    <div class="side top"></div>
    <div class="side left"></div>
    <div class="side right"></div>
-   <div class="side front"></div>
+   <div class="side front"> <div class="side frontdoor"> </div></div>
       <div class="side back"></div>
 </div>
 
