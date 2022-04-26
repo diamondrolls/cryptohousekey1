@@ -260,7 +260,7 @@ position:relevant;
   height:310px;
   width:200px;
   bottom:0%;
-  left:45%;
+  left:100px;
   transform: translateZ(192px);
   position:absolute;
   background-color:rgb(255, 215, 1);
@@ -270,26 +270,27 @@ position:relevant;
 .frontwindow {
   height:100px;
   width:50px;
-  top:200px;
+  top:50px;
   left:200px;
   transform: translateZ(192px);
   position:relative;
-  background-color:rgb(255, 215, 1);
+  background-color:rgba(255, 215, .5);
 	border-style:inset;
-       border-color:rgba(255, 215, 0, .5);
+       border-color:rgba(255, 215, 0);
 }
 
 .frontwindow2 {
   height:100px;
   width:50px;
-  top:200px;
-  left:200px;
+  top:50px;
+  right:200px;
   transform: translateZ(192px);
   position:absolute;
-  background-color:rgb(255, 215, 1);
+  background-color:rgba(255, 215, 1, .5);
 	border-style:inset;
-            border-color:rgba(255, 215, 0, .5);
+            border-color:rgba(255, 215, 0);
 }
+
 .left {
   width: 100%;
   transform: translateZ(-315px) rotateY(90deg);
@@ -301,7 +302,6 @@ position:relevant;
 
 .right {
   width: 100%;
-  
   transform: translateZ(-315px) rotateY(-90deg);
   transform-origin: left;
   background-color:rgba(255, 0, 0, .5);
