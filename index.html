@@ -240,7 +240,7 @@ position:relevant;
      background-color:rgba(255, 0, 0, .5);
 }
 
-.front {
+.back {
   transform: rotateX(90deg);
   transform-origin: center;
   background-color:rgba(255, 0, 0, .5);
@@ -248,9 +248,9 @@ position:relevant;
        border-color:rgb(255, 255, 255);
 }
   
-.back {
-  transform: rotateX(90deg);
-  transform-origin:center;
+.front {
+  z-index:333;
+  position:absolute;
   background-color:rgba(255, 0, 0, .5);
 	border-style:outset;
        border-color:rgb(255, 255, 255);
