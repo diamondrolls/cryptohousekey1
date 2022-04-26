@@ -226,7 +226,6 @@ position:relevant;
   top: 0;
   left: 0;
   position: absolute;
-  border-radius: 10%;
   border-style:outset;
        border-color:rgb(255, 255, 255);
 }
@@ -258,8 +257,8 @@ position:relevant;
 }
 
 .frontdoor {
-  height:100px;
-  width:50px;
+  height:310px;
+  width:200px;
   bottom:0%;
   left:45%;
   transform: translateZ(192px);
@@ -267,6 +266,29 @@ position:relevant;
   background-color:rgb(255, 215, 1);
 	border-style:outset;
        border-color:rgb(255, 215, 0);
+}
+.frontwindow {
+  height:100px;
+  width:50px;
+  top:200px;
+  left:200px;
+  transform: translateZ(192px);
+  position:relative;
+  background-color:rgb(255, 215, 1);
+	border-style:inset;
+       border-color:rgba(255, 215, 0, .5);
+}
+
+.frontwindow2 {
+  height:100px;
+  width:50px;
+  top:200px;
+  left:200px;
+  transform: translateZ(192px);
+  position:relative;
+  background-color:rgb(255, 215, 1);
+	border-style:inset;
+            border-color:rgba(255, 215, 0, .5);
 }
 .left {
   width: 100%;
@@ -364,7 +386,7 @@ body{
    <div class="side top"></div>
    <div class="side left"></div>
    <div class="side right"></div>
-   <div class="side front"> <div class="frontdoor"> </div></div>
+   <div class="side front"> <div class="frontwindow"></div> <div class="frontdoor"></div> <div class="frontwindow2"></div> </div>
       <div class="side back"></div>
 </div>
 
