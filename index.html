@@ -62,26 +62,40 @@
 	border-style:outset;
 		   top:25%;
 }
-		.plane1{" https://raw.githubusercontent.com/diamondrolls/images/main/94C1D5A6-77F7-4DB0-8620-19511B71E473.png  ");
+      .shooter{
+      background-color:rgb(0,255,0);
     transform: translateZ(500px);
 position:absolute;
       z-index:9999;
-	background-size:300px 300px;
-        height:300px;
-	width:300px;
-	left:200px;
+	background-size:7px 25px;
+        height:7px;
+	width:25px;
+	left:60px;
 	top:500px;
 	animation: kitty 7s infinite alternate;
         -webkit-animation: kitty 7s infinite alternate;
+} 
+		.plane1{
+		background-image:url{" https://raw.githubusercontent.com/diamondrolls/images/main/E8B957BF-7103-4143-9BBD-9E9B6E1ECCFF.png  ");
+    transform: translateZ(500px);
+position:absolute;
+      z-index:9999;
+	background-size:800px 300px;
+        height:300px;
+	width:800px;
+	left:50px;
+	top:300px;
+	 
 } 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes kitty{
  0% { 
        top:500px;
-       
+       left:60px;
        }
 100% { 
-        top:800px;
+        top:500px;
+	left:700px;
            
           }
 }
@@ -89,11 +103,11 @@ position:absolute;
 @keyframes kitty{ 
 0%  { 
        top:500px;
-       
+       left:50px;
        }
 100% { 
-        top:800px;
-           
+        top:60px;
+	left:700px;
           }
         }
     .registrationbutton{
@@ -446,7 +460,7 @@ body{
       <div class="side back"></div>
 </div>
 
- <div class="plane1"></div>
+ <div class="plane1"><div class="shooter"></div></div>
 
  <center> <a href='https://diamondrolls.github.io/thepremiumway/'> <div class="registrationbutton"> <h7 class="neon" data-text=" House On The Moon "> House On The Moon </h7>  </div></a></center>
 
